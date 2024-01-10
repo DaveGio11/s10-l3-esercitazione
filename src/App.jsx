@@ -4,6 +4,7 @@ import MyNav from "./components/MyNav";
 import TopBar from "./components/TopBar";
 import Myfooter from "./components/MyFooter";
 import Gallery from "./components/Gallery";
+import MovieDetails from "./components/MovieDeatails";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="movies" element={<Gallery searchValue="Devil" title="Movies" />} />
           <Route path="add" element={<Gallery searchValue="Iron man" title="Aggiunti di recente" />} />
           <Route path="preferiti" element={<Gallery searchValue="Rocco" title="Preferiti" />} />
+          <Route path="../:movieId" element={<MovieDetails />} />
         </Routes>
         <Myfooter />
       </BrowserRouter>
